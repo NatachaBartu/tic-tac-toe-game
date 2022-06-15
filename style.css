@@ -55,4 +55,67 @@ body {
   height: 200px;
   width: 200px;
   background: #0e4a82;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.x::after {
+  content: '✕';
+  font-size: 120px;
+}
+
+.o::after {
+  content: '○';
+  font-size: 220px;
+  color: #2d2e2e;
+}
+
+.won::after {
+  color: red;
+}
+
+.x, .o {
+  cursor: default;
+}
+
+@media only screen and (max-width: 1024px) {
+  .game-grid {
+    margin-top: 25px;
+    grid-gap: 18px;
+    }
+
+    .cell {
+      height: 150px;
+      width: 150px;
+    }
+
+    .x::after {
+      font-size: 150px;
+    }
+
+    .o::after {
+      font-size: 175px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    margin: 25px;
+    padding: 25px;
+  }
+
+  .cell {
+    height: 100px;
+    width: 100px;
+  }
+
+  .x::after {
+    font-size: 100px;
+  }
+
+  .o::after {
+    font-size: 125px;
+  }
+
 }
